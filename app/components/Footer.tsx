@@ -55,25 +55,27 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="bg-secondary">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-        <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-          {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
-              <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                {item.name}
-              </Link>
-            </div>
-          ))}
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-16 lg:px-8">
+        <nav className="mb-8 sm:mb-12" aria-label="Footer">
+          <ul className="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:space-x-8">
+            {navigation.main.map((item) => (
+              <li key={item.name}>
+                <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
-        <div className="mt-10 flex justify-center space-x-10">
+        <div className="flex justify-center space-x-6 sm:space-x-8">
           {navigation.social.map((item) => (
             <Link key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
               <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
+              <item.icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
             </Link>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-8 sm:mt-12 text-center">
           <p className="text-xs leading-5 text-gray-400">
             &copy; {new Date().getFullYear()} Sang Saka NFT Collection. All rights reserved.
           </p>
