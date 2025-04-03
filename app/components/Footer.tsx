@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const navigation = {
   main: [
@@ -56,30 +57,53 @@ export default function Footer() {
   return (
     <footer className="bg-secondary">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-16 lg:px-8">
-        <nav className="mb-8 sm:mb-12" aria-label="Footer">
+        <motion.nav 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8 sm:mb-12" 
+          aria-label="Footer"
+        >
           <ul className="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:space-x-8">
             {navigation.main.map((item) => (
               <li key={item.name}>
-                <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                <Link 
+                  href={item.href} 
+                  className="text-sm leading-6 text-gray-300 hover:text-white transition-colors duration-300"
+                >
                   {item.name}
                 </Link>
               </li>
             ))}
           </ul>
-        </nav>
-        <div className="flex justify-center space-x-6 sm:space-x-8">
+        </motion.nav>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex justify-center space-x-6 sm:space-x-8"
+        >
           {navigation.social.map((item) => (
-            <Link key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+            <Link 
+              key={item.name} 
+              href={item.href} 
+              className="text-gray-400 hover:text-gray-300 transition-colors duration-300"
+            >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
             </Link>
           ))}
-        </div>
-        <div className="mt-8 sm:mt-12 text-center">
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-8 sm:mt-12 text-center"
+        >
           <p className="text-xs leading-5 text-gray-400">
             &copy; {new Date().getFullYear()} Sang Saka NFT Collection. All rights reserved.
           </p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
