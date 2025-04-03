@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
@@ -11,16 +12,23 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-secondary/80 backdrop-blur-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-2xl font-bold text-primary">
-            Sang Saka
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/logo.png"
+              alt="Sang Saka Logo"
+              width={40}
+              height={40}
+              className="w-8 h-8 sm:w-10 sm:h-10"
+            />
+            <span className="text-xl sm:text-2xl font-bold text-primary">Sang Saka</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#featured" className="hover:text-primary transition-colors">
+            <Link href="#featured" className="text-gray-300 hover:text-primary transition-colors">
               Featured
             </Link>
-            <Link href="#about" className="hover:text-primary transition-colors">
+            <Link href="#about" className="text-gray-300 hover:text-primary transition-colors">
               About
             </Link>
             <Link
@@ -36,6 +44,7 @@ export default function Navbar() {
           <button
             className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             <svg
               className="w-6 h-6"
@@ -65,14 +74,14 @@ export default function Navbar() {
           <div className="py-4 space-y-4">
             <Link
               href="#featured"
-              className="block hover:text-primary transition-colors"
+              className="block text-gray-300 hover:text-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Featured
             </Link>
             <Link
               href="#about"
-              className="block hover:text-primary transition-colors"
+              className="block text-gray-300 hover:text-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
               About
