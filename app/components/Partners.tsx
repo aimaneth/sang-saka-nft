@@ -3,25 +3,15 @@ import { motion } from 'framer-motion';
 
 const partners = [
   {
-    name: 'OpenSea',
-    logo: '/images/partners/opensea.png',
-    link: 'https://opensea.io'
+    name: 'Konfederasi',
+    logo: '/images/partners/konfed.png',
+    link: 'https://konfed.my'
   },
   {
-    name: 'Ethereum',
-    logo: '/images/partners/ethereum.png',
-    link: 'https://ethereum.org'
+    name: 'Malaysia Blockchain Week',
+    logo: '/images/partners/mybw.png',
+    link: 'https://myblockchainweek.com'
   },
-  {
-    name: 'Alchemy',
-    logo: '/images/partners/alchemy.png',
-    link: 'https://alchemy.com'
-  },
-  {
-    name: 'MetaMask',
-    logo: '/images/partners/metamask.png',
-    link: 'https://metamask.io'
-  }
 ];
 
 export default function Partners() {
