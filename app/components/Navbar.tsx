@@ -20,7 +20,7 @@ export default function Navbar() {
               height={40}
               className="w-8 h-8 sm:w-10 sm:h-10"
             />
-            <span className="text-xl sm:text-2xl font-bold text-primary">Sang Saka</span>
+            <span className="text-xl sm:text-2xl font-bold text-white">Sang Saka</span>
           </Link>
 
           {/* Desktop Navigation */}
