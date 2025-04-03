@@ -11,7 +11,7 @@ const partners = [
     name: 'Malaysia Blockchain Week',
     logo: '/images/partners/mybw.png',
     link: 'https://myblockchainweek.com'
-  },
+  }
 ];
 
 export default function Partners() {
