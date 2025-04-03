@@ -16,7 +16,7 @@ const partners = [
 
 export default function Partners() {
   return (
-    <section className="py-16 sm:py-20 bg-secondary-light">
+    <section id="partners" className="py-16 sm:py-20 bg-secondary-light">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function Partners() {
         >
           Our Partners
         </motion.h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 items-center justify-items-center">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
           {partners.map((partner, index) => (
             <motion.a
               key={partner.name}

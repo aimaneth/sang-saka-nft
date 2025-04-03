@@ -25,7 +25,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-16 sm:py-20 bg-primary relative overflow-hidden">
+    <section id="features" className="py-16 sm:py-20 bg-primary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent" />
